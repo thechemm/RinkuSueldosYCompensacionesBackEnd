@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RinkuSueldosYCompensacionesBackEnd", "RinkuSueldosYCompensacionesBackEnd\RinkuSueldosYCompensacionesBackEnd.csproj", "{57ACDDE9-8990-426F-BDE6-E00E819E9A43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57ACDDE9-8990-426F-BDE6-E00E819E9A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57ACDDE9-8990-426F-BDE6-E00E819E9A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57ACDDE9-8990-426F-BDE6-E00E819E9A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57ACDDE9-8990-426F-BDE6-E00E819E9A43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {725C4D66-DF55-4369-A20F-1CB2F4C1A621}
+	EndGlobalSection
+EndGlobal
