@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DT-ELITEDESK-HP\\source\\repos\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd.csproj": {}
+    "/Users/wizard/Documents/GitHub/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DT-ELITEDESK-HP\\source\\repos\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd.csproj": {
+    "/Users/wizard/Documents/GitHub/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DT-ELITEDESK-HP\\source\\repos\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd.csproj",
+        "projectUniqueName": "/Users/wizard/Documents/GitHub/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd.csproj",
         "projectName": "RinkuSueldosYCompensacionesBackEnd",
-        "projectPath": "C:\\Users\\DT-ELITEDESK-HP\\source\\repos\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd.csproj",
-        "packagesPath": "C:\\Users\\DT-ELITEDESK-HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DT-ELITEDESK-HP\\source\\repos\\RinkuSueldosYCompensacionesBackEnd\\RinkuSueldosYCompensacionesBackEnd\\obj\\",
+        "projectPath": "/Users/wizard/Documents/GitHub/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd.csproj",
+        "packagesPath": "/Users/wizard/.nuget/packages/",
+        "outputPath": "/Users/wizard/Documents/GitHub/RinkuSueldosYCompensacionesBackEnd/RinkuSueldosYCompensacionesBackEnd/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DT-ELITEDESK-HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/wizard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -53,6 +46,12 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -69,7 +68,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.23.1, )"
             }
           },
           "imports": [
@@ -91,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
