@@ -1,7 +1,9 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using RinkuSueldosYCompensacionesBackEnd.DAO;
+using RinkuSueldosYCompensacionesBackEnd.Models;
 
-namespace aprendo_mas_backend.Context
+namespace RinkuSueldosYCompensacionesBackEnd.Context
 {
     public class DataContext : DbContext
     {
@@ -9,9 +11,7 @@ namespace aprendo_mas_backend.Context
         {
 
         }
-        public DbSet<Usuario> tblUsuarios { get; set; }
-        public DbSet<UsuarioPerfil> tblUsarioPerfiles { get; set; }
-        public DbSet<Tesis> tblTesis { get; set; }
-        public DbSet<Carrera> tblCarreras { get; set; }
+        public DbSet<Empleado> tblEmpleados { get; set; }
+       
     }
 }

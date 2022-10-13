@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{57ACDDE9-8990-426F-BDE6-E00E819E9A43}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RinkuSueldosYCompensacionesBackEnd/Controllers/EmpleadosController.cs">
+    <Files>
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/appsettings.json" Line="1" Column="2" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Program.cs" Line="73" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/appsettings.Development.json" Line="15" Column="37" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Context/DataContext.cs" Line="12" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Models/Empleados.cs" Line="13" Column="58" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/DAO/EmpleadoDAO.cs" Line="26" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/DAO/DataControl.cs" Line="16" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Controllers/EmpleadoController.cs" Line="72" Column="14" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Pages/Create.cshtml" Line="1" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Pages/Create.cshtml.cs" Line="1" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Pages/Edit.cshtml.cs" Line="1" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Pages/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="RinkuSueldosYCompensacionesBackEnd/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RinkuSueldosYCompensacionesBackEnd" expanded="True">
+            <Node name="RinkuSueldosYCompensacionesBackEnd" expanded="True">
+              <Node name="Context" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="DAO" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.RinkuSueldosYCompensacionesBackEnd PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
