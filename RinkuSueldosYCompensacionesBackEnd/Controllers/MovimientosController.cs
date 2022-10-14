@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,43 +13,42 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpleadosController : ControllerBase
+    public class MovimientosController : ControllerBase
     {
         private readonly DataContext _context;
-        private EmpleadoDAO _empleadoDao;
+        private MovimientoDAO _movimientoDAO;
 
-        public EmpleadosController(DataContext context)
+        public MovimientosController(DataContext context)
         {
             _context = context;
-            _empleadoDao = new(_context.Database.GetConnectionString()!);
+            _movimientoDAO = new(_context.Database.GetConnectionString()!);
         }
 
-        // GET: api/Empleados
+        // GET: api/Movimientos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Empleado>>> GettblEmpleados()
+        public async Task<ActionResult<IEnumerable<Movimiento>>> GettblMovimientos()
         {
             try
             {
-                IEnumerable<Empleado> empleados = await _empleadoDao.GetAll();
-                return empleados.ToList();
+                IEnumerable<Movimiento> movimientos  = await _movimientoDAO.GetAll();
+                return movimientos.ToList();
             }
             catch (Exception ex)
             {
                 return Problem(ex.Message);
             }
-            
         }
 
-        // GET: api/Empleados/5
+        // GET: api/Movimientos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Empleado>> GetEmpleado(int id)
+        public async Task<ActionResult<Movimiento>> GetMovimiento(int id)
         {
             try
             {
-                Empleado? empleado = await _empleadoDao.FindById(id);
-                if (empleado == null) return NotFound();
+                Movimiento? movimiento = await _movimientoDAO.FindById(id);
+                if (movimiento == null) return NotFound();
 
-                return empleado;
+                return movimiento;
             }
             catch (Exception ex)
             {
@@ -57,18 +56,17 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
             }
         }
 
-        // PUT: api/Empleados/5
+        // PUT: api/Movimientos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmpleado(int id, Empleado empleado)
+        public async Task<IActionResult> PutMovimiento(int id, Movimiento movimiento)
         {
-
             try
             {
-                Empleado? empleadoExist = await _empleadoDao.FindById(id);
-                if (empleadoExist == null) return NotFound();
+                Movimiento? movimientoExist = await _movimientoDAO.FindById(id);
+                if (movimientoExist == null) return NotFound();
 
-                _empleadoDao.Update(empleado);
+                _movimientoDAO.Update(movimiento);
             }
             catch (Exception ex)
             {
@@ -78,14 +76,14 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
             return NoContent();
         }
 
-        // POST: api/Empleado
+        // POST: api/Movimientos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<IActionResult> PostEmpleado(Empleado empleado)
+        public async Task<ActionResult<Movimiento>> PostMovimiento(Movimiento movimiento)
         {
             try
-            { 
-                await _empleadoDao.Create(empleado);
+            {
+                await _movimientoDAO.Create(movimiento);
             }
             catch (Exception ex)
             {
@@ -95,13 +93,13 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Empleados/5
+        // DELETE: api/Movimientos/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteEmpleado(int id)
+        public async Task<IActionResult> DeleteMovimiento(int id)
         {
             try
             {
-                await _empleadoDao.Delete(id);
+                await _movimientoDAO.Delete(id);
             }
             catch (Exception ex)
             {
@@ -109,7 +107,7 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
             }
 
             return NoContent();
-
         }
+
     }
 }

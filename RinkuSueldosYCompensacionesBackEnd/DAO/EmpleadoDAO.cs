@@ -10,9 +10,7 @@ namespace RinkuSueldosYCompensacionesBackEnd.DAO
 	{
         const string _storeName = "pEmpleados";
         private Empleado _empleado { get; set; }
-
         private DataControl _dataControl { get; set; }
-
         public EmpleadoDAO(string conn)
         {
             _dataControl = new(conn);
@@ -40,7 +38,6 @@ namespace RinkuSueldosYCompensacionesBackEnd.DAO
         public async void Update(Empleado empleado)
         {
             _empleado = empleado;
-            var a = System.Configuration.ConfigurationManager.ConnectionStrings["BarManConnectionString"].ConnectionString;
             await _dataControl.ExecProcedureOneWay(_storeName, GetSqlParameters(4));
         }
 
@@ -62,9 +59,6 @@ namespace RinkuSueldosYCompensacionesBackEnd.DAO
                 empleado.rolId = (int)row["rolId"];
                 empleado.numero = row["numero"].ToString();
                 empleado.nombre = row["nombre"].ToString();
-                empleado.borradorbit = row["borradorbit"] as bool?;
-                empleado.fechaCrea = row["fechaCrea"] as DateTime?;
-                empleado.ultimaModificacion = row["ultimaModificacion"] as DateTime?;
                 empleados.Add(empleado);
             }
             return empleados;
