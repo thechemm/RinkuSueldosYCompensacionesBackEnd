@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RinkuSueldosYCompensacionesBackEnd.Context;
 using RinkuSueldosYCompensacionesBackEnd.DAO;
+using RinkuSueldosYCompensacionesBackEnd.Interfaces;
 using RinkuSueldosYCompensacionesBackEnd.Models;
+using RinkuSueldosYCompensacionesBackEnd.Models.Helpers;
 
 namespace RinkuSueldosYCompensacionesBackEnd.Controllers
 {
@@ -16,11 +18,13 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
     public class EmpleadosController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly ISueldoMensualDTO _sueldoMensualDTO;
         private EmpleadoDAO _empleadoDao;
 
-        public EmpleadosController(DataContext context)
+        public EmpleadosController(DataContext context,ISueldoMensualDTO sueldoMensual)
         {
             _context = context;
+            _sueldoMensualDTO = sueldoMensual;
             _empleadoDao = new(_context.Database.GetConnectionString()!);
         }
 
@@ -110,6 +114,22 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
 
             return NoContent();
 
+        }
+
+        [HttpPost("SueldoMensual")]
+        public async Task<ActionResult<IEnumerable<SueldoMensual>>> PostEmpleadoSueldoMensual(FiltroSueldos filtro)
+        {
+            try
+            {
+                IEnumerable<SueldoMensual> sueldos = await _sueldoMensualDTO.GetSueldosMensualesAsync(filtro);
+                return sueldos.ToArray();
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+
+            
         }
     }
 }

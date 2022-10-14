@@ -25,14 +25,14 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CatMes>>> GettbltblCatMeses()
         {
-            return await _context.tbltblCatMeses.ToListAsync();
+            return await _context.tblCatMeses.ToListAsync();
         }
 
         // GET: api/CatMeses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CatMes>> GetCatMes(int id)
         {
-            var catMes = await _context.tbltblCatMeses.FindAsync(id);
+            var catMes = await _context.tblCatMeses.FindAsync(id);
 
             if (catMes == null)
             {

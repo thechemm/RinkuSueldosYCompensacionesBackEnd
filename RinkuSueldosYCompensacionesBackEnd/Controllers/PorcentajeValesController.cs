@@ -25,14 +25,14 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PorcentajeVale>>> GettbltblPorcentajeVales()
         {
-            return await _context.tbltblPorcentajeVales.ToListAsync();
+            return await _context.tblPorcentajeVales.ToListAsync();
         }
 
         // GET: api/PorcentajeVales/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PorcentajeVale>> GetPorcentajeVale(int id)
         {
-            var porcentajeVale = await _context.tbltblPorcentajeVales.FindAsync(id);
+            var porcentajeVale = await _context.tblPorcentajeVales.FindAsync(id);
 
             if (porcentajeVale == null)
             {
@@ -78,7 +78,7 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
         [HttpPost]
         public async Task<ActionResult<PorcentajeVale>> PostPorcentajeVale(PorcentajeVale porcentajeVale)
         {
-            _context.tbltblPorcentajeVales.Add(porcentajeVale);
+            _context.tblPorcentajeVales.Add(porcentajeVale);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPorcentajeVale", new { id = porcentajeVale.id }, porcentajeVale);
@@ -88,13 +88,13 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePorcentajeVale(int id)
         {
-            var porcentajeVale = await _context.tbltblPorcentajeVales.FindAsync(id);
+            var porcentajeVale = await _context.tblPorcentajeVales.FindAsync(id);
             if (porcentajeVale == null)
             {
                 return NotFound();
             }
 
-            _context.tbltblPorcentajeVales.Remove(porcentajeVale);
+            _context.tblPorcentajeVales.Remove(porcentajeVale);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -102,7 +102,7 @@ namespace RinkuSueldosYCompensacionesBackEnd.Controllers
 
         private bool PorcentajeValeExists(int id)
         {
-            return _context.tbltblPorcentajeVales.Any(e => e.id == id);
+            return _context.tblPorcentajeVales.Any(e => e.id == id);
         }
     }
 }

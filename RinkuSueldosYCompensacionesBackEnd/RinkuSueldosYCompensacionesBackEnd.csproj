@@ -27,7 +27,6 @@
   <ItemGroup>
     <None Remove="Models\" />
     <None Remove="Context\" />
-    <None Remove="DTO\" />
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
@@ -37,11 +36,16 @@
     <None Remove="System.IdentityModel.Tokens.Jwt" />
     <None Remove="DAO\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Models\Helpers\" />
+    <None Remove="DTO\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Context\" />
-    <Folder Include="DTO\" />
     <Folder Include="DAO\" />
+    <Folder Include="Models\Helpers\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

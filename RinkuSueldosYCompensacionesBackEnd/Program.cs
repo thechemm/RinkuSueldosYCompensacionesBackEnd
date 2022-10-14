@@ -3,10 +3,14 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using RinkuSueldosYCompensacionesBackEnd.Context;
+using RinkuSueldosYCompensacionesBackEnd.Interfaces;
+using RinkuSueldosYCompensacionesBackEnd.DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// dependency injection
 
+builder.Services.AddTransient<ISueldoMensualDTO, SueldoMensualDTO>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
                 options =>
                  options.TokenValidationParameters = new TokenValidationParameters

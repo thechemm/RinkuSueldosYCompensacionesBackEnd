@@ -14,8 +14,8 @@ namespace RinkuSueldosYCompensacionesBackEnd.Context
         public DbSet<Empleado> tblEmpleados { get; set; }
         public DbSet<Movimiento> tblMovimientos { get; set; }
         public DbSet<EmpleadoRol> tblEmpleadosRoles { get; set; }
-        public DbSet<CatMes> tbltblCatMeses { get; set; }
-        public DbSet<PorcentajeVale> tbltblPorcentajeVales { get; set; }
+        public DbSet<CatMes> tblCatMeses { get; set; }
+        public DbSet<PorcentajeVale> tblPorcentajeVales { get; set; }
         public DbSet<Retencion> tblRetenciones { get; set; }
        
     }
